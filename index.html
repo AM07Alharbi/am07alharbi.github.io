@@ -59,6 +59,18 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
+        /* Right-to-left (Arabic) Styles */
+        .rtl {
+            text-align: right;
+            direction: rtl;
+        }
+
+        /* Left-to-right (English) Styles */
+        .ltr {
+            text-align: left;
+            direction: ltr;
+        }
+
         .section h2 {
             font-size: 24px;
             margin: 20px 0;
@@ -92,16 +104,6 @@
 
         footer p {
             margin: 0;
-        }
-
-        /* RTL for Arabic */
-        .rtl {
-            text-align: right;
-        }
-
-        /* LTR for English */
-        .ltr {
-            text-align: left;
         }
 
         /* Responsive Design */
@@ -139,7 +141,9 @@
 
 <header>
     <h1>السلام عليكم ورحمة الله وبركاته</h1>
-    <p>(تحية من عند الله مباركة طيبة)</p>
+ <p> <strong> Peace Be Upon You and Allah's Mercy and Blessings 
+ <bdi>السلام عليكم ورحمة الله وبركاته </bdi> </strong></p>
+    <p>  <strong>  (A Blessed and Good Greeting from Allah) (تحية من عند الله مباركة طيبة) </strong></p> 
 </header>
 
 <div class="content">
@@ -175,46 +179,50 @@
             <li>Humor</li>
         </ul>
 
-        <h2>Contact Addresses</h2>
-        <p><strong>Email (IU):</strong> a.m.alharbi AT iu DOT edu DOT sa</p>
-        <p><strong>Email (KAUST):</strong> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+        <h3>Contact Addresses</h3>
+        <p><strong>Email (IU):</strong> 
+        <br> a.m.alharbi AT iu DOT edu DOT sa</p>
+        <p><strong>Email (KAUST):</strong>
+        <br> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
     </div>
 
     <!-- Arabic Version (Right Side) -->
     <div class="section rtl">
-        <h2>حياكم الله. هذي صفحتي على الـ"غِتهَب".</h2>
-        <p><strong>الاسم:</strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
-        <h3>الانتساب:</h3>
+        <h2><bdi>حياكم الله. هذي صفحتي على الـ"غِتهَب".</bdi></h2>
+        <p><strong><bdi>الاسم:</bdi></strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
+        <h3><bdi>الانتساب:</bdi></h3>
         <ul>
-            <li><strong>الجامعة الإسلامية بالمدينة المنورة</strong> (معيد)</li>
-            <li><strong>جامعة الملك عبدالله للعلوم والتقنية</strong> (طالب دكتوراه)</li>
+            <li><strong><bdi>الجامعة الإسلامية بالمدينة المنورة</bdi></strong> (معيد)</li>
+            <li><strong><bdi>جامعة الملك عبدالله للعلوم والتقنية</bdi></strong> (طالب دكتوراه)</li>
         </ul>
 
-        <h3>التخصص:</h3>
+        <h3><bdi>التخصص:</bdi></h3>
         <ul>
-            <li><strong>الرياضيات التطبيقية:</strong></li>
+            <li><strong><bdi>الرياضيات التطبيقية:</bdi></strong></li>
             <ul>
-                <li>ألعاب المجال المتوسط</li>
-                <li>حركة الحشود والمرور (مثال: نموذج هيوز وَ نموذج LWR)</li>
-                <li>معادلات تفاضلية جزئية</li>
-                <li>التحليل الدالي والتحليل الحقيقي</li>
+                <li><bdi>ألعاب المجال المتوسط</bdi></li>
+                <li><bdi>حركة الحشود والمرور (مثال: نموذج هيوز وَ نموذج LWR)</bdi></li>
+                <li><bdi>معادلات تفاضلية جزئية</bdi></li>
+                <li><bdi>التحليل الدالي والتحليل الحقيقي</bdi></li>
             </ul>
         </ul>
 
-        <h3>اهتمامات عامة:</h3>
+        <h3><bdi>اهتمامات عامة:</bdi></h3>
         <ul>
-            <li>تفسير القرآن العظيم</li>
-            <li>السنة ومسائل التوحيد والعقيدة</li>
-            <li>الملل والنحل</li>
-            <li>اللغات</li>
-            <li>الخط العربي</li>
-            <li>الألغاز</li>
-            <li>الطرفة والفكاهة</li>
+            <li><bdi>تفسير القرآن العظيم</bdi></li>
+            <li><bdi>السنة ومسائل التوحيد والعقيدة</bdi></li>
+            <li><bdi>الملل والنحل</bdi></li>
+            <li><bdi>اللغات</bdi></li>
+            <li><bdi>الخط العربي</bdi></li>
+            <li><bdi>الألغاز</bdi></li>
+            <li><bdi>الطرفة والفكاهة</bdi></li>
         </ul>
 
-        <h2>عناوين التواصل</h2>
-        <p><strong>البريد الإلكتروني (الجامعة الإسلامية):</strong> a.m.alharbi AT iu DOT edu DOT sa</p>
-        <p><strong>البريد الإلكتروني (كاوست):</strong> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+        <h3><bdi>عناوين التواصل</bdi></h3>
+        <p><strong><bdi>البريد الإلكتروني (الجامعة الإسلامية): </bdi></strong>
+        <br>  a.m.alharbi AT iu DOT edu DOT sa</p>
+        <p><strong><bdi>البريد الإلكتروني (كاوست):</bdi></strong>
+        <br> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
     </div>
 </div>
 
