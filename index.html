@@ -19,7 +19,10 @@
             line-height: 1.6;
             padding-top: 50px;
             text-align: center;
-            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         header {
@@ -27,6 +30,7 @@
             color: white;
             padding: 40px 0;
             text-align: center;
+            width: 100%;
         }
 
         header h1 {
@@ -39,39 +43,48 @@
             font-weight: 300;
         }
 
-        section {
-            background-color: white;
-            max-width: 900px;
-            margin: 40px auto;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 40px;
             padding: 20px;
+        }
+
+        .section {
+            width: 48%;
+            padding: 20px;
+            background-color: white;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        .section h2 {
             font-size: 24px;
             margin: 20px 0;
             color: #00796b;
         }
 
-        h3 {
+        .section h3 {
             font-size: 20px;
             margin-bottom: 10px;
             color: #00796b;
         }
 
-        ul {
-            list-style-type: none;
+        .section ul {
+            list-style-type: disc;
             margin-bottom: 20px;
             text-align: right;
+            padding-left: 20px;
         }
 
-        ul li {
+        .section ul li {
             margin: 8px 0;
             font-size: 16px;
         }
 
-        table {
+        .section table {
             width: 100%;
             margin-top: 30px;
             border-collapse: collapse;
@@ -79,14 +92,14 @@
             border-radius: 8px;
         }
 
-        table th, table td {
+        .section table th, .section table td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid #ddd;
             font-size: 16px;
         }
 
-        table th {
+        .section table th {
             background-color: #00796b;
             color: white;
         }
@@ -109,9 +122,14 @@
                 font-size: 28px;
             }
 
-            section {
-                padding: 15px;
-                margin: 20px;
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                width: 100%;
+                margin-bottom: 20px;
             }
 
             h2 {
@@ -141,52 +159,96 @@
     <p>(تحية من عند الله مباركة طيبة)</p>
 </header>
 
-<section>
-    <h2>حياكم الله. هذي صفحتي على الـ"غِتهَب".</h2>
-    <p><strong>الاسم:</strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
-    <h3>الانتساب:</h3>
-    <ul>
-        <li><strong>الجامعة الإسلامية بالمدينة المنورة</strong> (معيد)</li>
-        <li><strong>جامعة الملك عبدالله للعلوم والتقنية</strong> (طالب دكتوراه)</li>
-    </ul>
-
-    <h3>التخصص:</h3>
-    <ul>
-        <li><strong>الرياضيات التطبيقية:</strong></li>
+<div class="content">
+    <!-- Arabic Version -->
+    <div class="section" dir="rtl">
+        <h2>حياكم الله. هذي صفحتي على الـ"غِتهَب".</h2>
+        <p><strong>الاسم:</strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
+        <h3>الانتساب:</h3>
         <ul>
-            <li>ألعاب المجال المتوسط</li>
-            <li>حركة الحشود والمرور (مثال: نموذج هيوز وَ نموذج LWR)</li>
-            <li>معادلات تفاضلية جزئية</li>
-            <li>التحليل الدالي والتحليل الحقيقي</li>
+            <li><strong>الجامعة الإسلامية بالمدينة المنورة</strong> (معيد)</li>
+            <li><strong>جامعة الملك عبدالله للعلوم والتقنية</strong> (طالب دكتوراه)</li>
         </ul>
-    </ul>
 
-    <h3>اهتمامات عامة:</h3>
-    <ul>
-        <li>تفسير القرآن العظيم</li>
-        <li>السنة ومسائل التوحيد والعقيدة</li>
-        <li>الملل والنحل</li>
-        <li>اللغات</li>
-        <li>الخط العربي</li>
-        <li>الألغاز</li>
-        <li>الطرفة والفكاهة</li>
-    </ul>
+        <h3>التخصص:</h3>
+        <ul>
+            <li><strong>الرياضيات التطبيقية:</strong></li>
+            <ul>
+                <li>ألعاب المجال المتوسط</li>
+                <li>حركة الحشود والمرور (مثال: نموذج هيوز وَ نموذج LWR)</li>
+                <li>معادلات تفاضلية جزئية</li>
+                <li>التحليل الدالي والتحليل الحقيقي</li>
+            </ul>
+        </ul>
 
-    <h2>Contact Addresses | عناوين التواصل</h2>
-    <table>
-        <tr>
-            <th>English</th>
-            <th>العربية</th>
-        </tr>
-        <tr>
-            <td>a.m.alharbi AT iu DOT edu DOT sa</td>
-            <td>abdulRahman.alharbi AT kaust DOT edu DOT sa</td>
-        </tr>
-    </table>
-</section>
+        <h3>اهتمامات عامة:</h3>
+        <ul>
+            <li>تفسير القرآن العظيم</li>
+            <li>السنة ومسائل التوحيد والعقيدة</li>
+            <li>الملل والنحل</li>
+            <li>اللغات</li>
+            <li>الخط العربي</li>
+            <li>الألغاز</li>
+            <li>الطرفة والفكاهة</li>
+        </ul>
+
+        <h2>عناوين التواصل</h2>
+        <table>
+            <tr>
+                <th>العربية</th>
+            </tr>
+            <tr>
+                <td>abdulRahman.alharbi AT kaust DOT edu DOT sa</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- English Version -->
+    <div class="section" dir="ltr">
+        <h2>Welcome! This is My Page on GitHub.</h2>
+        <p><strong>Name:</strong> AbdurRahman Al-Harbi (@AM07Alharbi)</p>
+        <h3>Affiliation:</h3>
+        <ul>
+            <li><strong>The Islamic University of Madinah</strong> (Teaching Assistant)</li>
+            <li><strong>King Abdullah University of Science and Technology (KAUST)</strong> (PhD Student)</li>
+        </ul>
+
+        <h3>Specialization:</h3>
+        <ul>
+            <li><strong>Applied Mathematics:</strong></li>
+            <ul>
+                <li>Mean-Field Games</li>
+                <li>Crowd and Traffic Movement (e.g., Hughes Model & LWR Model)</li>
+                <li>Partial Differential Equations</li>
+                <li>Functional Analysis and Real Analysis</li>
+            </ul>
+        </ul>
+
+        <h3>General Interests:</h3>
+        <ul>
+            <li>Interpretation of the Noble Quran</li>
+            <li>Hadith and Matters of Tawheed and Aqeedah</li>
+            <li>Religions and Sects</li>
+            <li>Languages</li>
+            <li>Arabic Calligraphy</li>
+            <li>Puzzles</li>
+            <li>Humor</li>
+        </ul>
+
+        <h2>Contact Addresses</h2>
+        <table>
+            <tr>
+                <th>English</th>
+            </tr>
+            <tr>
+                <td>a.m.alharbi AT iu DOT edu DOT sa</td>
+            </tr>
+        </table>
+    </div>
+</div>
 
 <footer>
-    <p>&copy; 2024 عبدالرحمن الحربي. جميع الحقوق محفوظة.</p>
+    <p>&copy; 2024 عبدالرحمن الحربي. All rights reserved.</p>
 </footer>
 
 </body>
