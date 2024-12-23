@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>صفحة عبدالرحمن الحربي</title>
+    <title>the page of AbdulRahman صفحة عبدالرحمن </title>
     <style>
+        /* Basic Styling */
         * {
             margin: 0;
             padding: 0;
@@ -42,6 +44,82 @@
             font-weight: 300;
         }
 
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 200px;
+            background-color: #00796b;
+            color: white;
+            height: 100%;
+            overflow-y: auto;
+            padding: 15px;
+            transform: translateX(-100%); /* Initially hidden */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.show {
+            transform: translateX(0); /* Show the sidebar */
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            margin: 10px 0;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #004d40;
+        }
+		
+        /* Toggle Button */
+        .toggle-btn {
+            position: fixed;
+            left: 10px;
+            top: 5px;
+            padding: 9px 13px; /* Increased size of the toggle button */
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 1000; /* Ensures the button is always on top */
+            font-size: 20px; /* Larger font size for the toggle button */
+            border-radius: 20%; /* Makes the button circular */
+        }
+
+        .toggle-btn:hover {
+            background-color: #004d40;
+        }
+		/* Greetings Container */
+        .greetings-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 0 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .greeting {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-style: italic;
+        }
+
+        .rtl {
+            direction: rtl;
+        }
+
+        .ltr {
+            direction: ltr;
+        }
+        /* Main Content Layout */
         .content {
             display: flex;
             justify-content: space-between;
@@ -49,6 +127,11 @@
             max-width: 1200px;
             margin-top: 40px;
             padding: 20px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        .content.shifted {
+            margin-left: 200px;
         }
 
         .section {
@@ -59,13 +142,11 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* Right-to-left (Arabic) Styles */
         .rtl {
             text-align: right;
             direction: rtl;
         }
 
-        /* Left-to-right (English) Styles */
         .ltr {
             text-align: left;
             direction: ltr;
@@ -106,7 +187,6 @@
             margin: 0;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 28px;
@@ -134,101 +214,139 @@
                 font-size: 14px;
             }
         }
-
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>السلام عليكم ورحمة الله وبركاته</h1>
- <p> <strong> Peace Be Upon You and Allah's Mercy and Blessings 
- <bdi>السلام عليكم ورحمة الله وبركاته </bdi> </strong></p>
-    <p>  <strong>  (A Blessed and Good Greeting from Allah) (تحية من عند الله مباركة طيبة) </strong></p> 
-</header>
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<div class="content">
-    <!-- English Version (Left Side) -->
-    <div class="section ltr">
-        <h2>Welcome! This is My Page on GitHub.</h2>
-        <p><strong>Name:</strong> AbdurRahman Al-Harbi (@AM07Alharbi)</p>
-        <h3>Affiliation:</h3>
-        <ul>
-            <li><strong>The Islamic University of Madinah</strong> (Teaching Assistant)</li>
-            <li><strong>King Abdullah University of Science and Technology (KAUST)</strong> (PhD Student)</li>
-        </ul>
-
-        <h3>Specialization:</h3>
-        <ul>
-            <li><strong>Applied Mathematics:</strong></li>
-            <ul>
-                <li>Mean-Field Games</li>
-                <li>Crowd and Traffic Movement (e.g., Hughes Model & LWR Model)</li>
-                <li>Partial Differential Equations</li>
-                <li>Functional Analysis and Real Analysis</li>
-            </ul>
-        </ul>
-
-        <h3>General Interests:</h3>
-        <ul>
-            <li>Interpretation of the Noble Quran</li>
-            <li>Hadith and Matters of Tawheed and Aqeedah</li>
-            <li>Religions and Sects</li>
-            <li>Languages</li>
-            <li>Arabic Calligraphy</li>
-            <li>Puzzles</li>
-            <li>Humor</li>
-        </ul>
-
-        <h3>Contact Addresses</h3>
-        <p><strong>Email (IU):</strong> 
-        <br> a.m.alharbi AT iu DOT edu DOT sa</p>
-        <p><strong>Email (KAUST):</strong>
-        <br> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar"> <br> <br>
+        <a href="#publications"> <span lang="ar">أبحاث منشورة</span><br> <span lang="en">Publications </span></a>
+        <a href="#cv"><span lang="ar">السيرة الذاتية</span><br> <span lang="en">CV</span> </a>
+        <a href="#articles"><span lang="ar">ملفات ومراجع متنوعة</span> <br> <span lang="en">Miscellaneous</span> </a>
+        <a href="#links"> <span lang="ar">روابط مفيدة</span> <br> <span lang="en">Useful Links</span> </a>
+        <a href="#iu"> <span lang="ar">الجامعة الإسلامية</span> <br> <span lang="en">The Islamic University</span></a>
+        <a href="#kaust"><span lang="ar">جامعة الملك عبدالله للعلوم والتقنية</span> <br> <span lang="en">KAUST</span> </a>
     </div>
 
-    <!-- Arabic Version (Right Side) -->
-    <div class="section rtl">
-        <h2><bdi>حياكم الله. هذي صفحتي على الـ"غِتهَب".</bdi></h2>
-        <p><strong><bdi>الاسم:</bdi></strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
-        <h3><bdi>الانتساب:</bdi></h3>
-        <ul>
-            <li><strong><bdi>الجامعة الإسلامية بالمدينة المنورة</bdi></strong> (معيد)</li>
-            <li><strong><bdi>جامعة الملك عبدالله للعلوم والتقنية</bdi></strong> (طالب دكتوراه)</li>
-        </ul>
+    <!-- Header -->
+     <header>
+        <h1>
+            <bdi>صفحة عبدالرحمن م. الحربي</bdi><br>
+            AbdulRahman M. Alharbi's Webpage
+        </h1>
 
-        <h3><bdi>التخصص:</bdi></h3>
-        <ul>
-            <li><strong><bdi>الرياضيات التطبيقية:</bdi></strong></li>
+        <!-- Greetings Container -->
+        <div class="greetings-container">
+            <!-- English Greeting (Left Side) -->
+            <div class="greeting ltr">
+                <span><strong>Peace Be Upon You and Allah's Mercy and Blessings</strong><br>
+                    (A Blessed and Good Greeting from Allah)</span>
+            </div>
+
+            <!-- Arabic Greeting (Right Side) -->
+            <div class="greeting rtl">
+                <span><strong><bdi>السلام عليكم ورحمة الله وبركاته</bdi></strong><br>
+                    <bdi>(تحية من عند الله مباركة طيبة)</bdi></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content" id="content">
+        <!-- English Version (Left Side) -->
+        <div class="section ltr">
+            <h2>Welcome! This is my personal webpage (on GitHub).</h2>
+            <p><strong>Name:</strong> AbdurRahman Al-Harbi (@AM07Alharbi)</p>
+            <h3>Affiliation:</h3>
             <ul>
-                <li><bdi>ألعاب المجال المتوسط</bdi></li>
-                <li><bdi>حركة الحشود والمرور (مثال: نموذج هيوز وَ نموذج LWR)</bdi></li>
-                <li><bdi>معادلات تفاضلية جزئية</bdi></li>
-                <li><bdi>التحليل الدالي والتحليل الحقيقي</bdi></li>
+                <li><strong>The Islamic University of Madinah</strong> (Teaching Assistant)</li>
+                <li><strong>King Abdullah University of Science and Technology (KAUST)</strong> (PhD Student)</li>
             </ul>
-        </ul>
 
-        <h3><bdi>اهتمامات عامة:</bdi></h3>
-        <ul>
-            <li><bdi>تفسير القرآن العظيم</bdi></li>
-            <li><bdi>السنة ومسائل التوحيد والعقيدة</bdi></li>
-            <li><bdi>الملل والنحل</bdi></li>
-            <li><bdi>اللغات</bdi></li>
-            <li><bdi>الخط العربي</bdi></li>
-            <li><bdi>الألغاز</bdi></li>
-            <li><bdi>الطرفة والفكاهة</bdi></li>
-        </ul>
+            <h3>Specialization:</h3>
+            <ul>
+                <li><strong>Applied Mathematics:</strong></li>
+                <ul>
+                    <li>Mean-Field Games</li>
+                    <li>Crowd and Traffic Movement (e.g., Hughes Model & LWR Model)</li>
+                    <li>Partial Differential Equations</li>
+                    <li>Functional Analysis and Real Analysis</li>
+                </ul>
+            </ul>
 
-        <h3><bdi>عناوين التواصل</bdi></h3>
-        <p><strong><bdi>البريد الإلكتروني (الجامعة الإسلامية): </bdi></strong>
-        <br>  a.m.alharbi AT iu DOT edu DOT sa</p>
-        <p><strong><bdi>البريد الإلكتروني (كاوست):</bdi></strong>
-        <br> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+            <h3>General Interests:</h3>
+            <ul>
+                <li>Interpretation of the Noble Quran</li>
+                <li>Hadith and Matters of Tawheed and Aqeedah</li>
+                <li>Religions and Sects</li>
+                <li>Languages</li>
+                <li>Arabic Calligraphy</li>
+                <li>Puzzles</li>
+                <li>Humor</li>
+            </ul>
+
+            <h2>Contact Addresses</h2>
+            <p><strong>Email (IU):</strong> a.m.alharbi AT iu DOT edu DOT sa</p>
+            <p><strong>Email (KAUST):</strong> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+        </div>
+
+        <!-- Arabic Version (Right Side) -->
+        <div class="section rtl">
+            <h2><bdi>حياكم الله. هذي صفحتي الشخصية (على الـ"غِتهَب").</bdi></h2>
+            <p><strong><bdi>الاسم:</bdi></strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
+            <h3><bdi>الانتساب:</bdi></h3>
+            <ul>
+                <li><strong><bdi>الجامعة الإسلامية بالمدينة المنورة</bdi></strong> (معيد)</li>
+                <li><strong><bdi>جامعة الملك عبدالله للعلوم والتقنية</bdi></strong> (طالب دكتوراه)</li>
+            </ul>
+
+            <h3><bdi>التخصص:</bdi></h3>
+            <ul>
+                <li><strong><bdi>الرياضيات التطبيقية</bdi>:</strong></li>
+                <ul>
+                    <li><bdi>ألعاب الحشود</bdi></li>
+                    <li><bdi>النماذج الرياضية لحركة الحشود والمرور</bdi></li>
+                    <li><bdi>معادلات تفاضلية جزئية</bdi></li>
+                    <li><bdi>التحليل الدالي والتحليل الحقيقي</bdi></li>
+                </ul>
+            </ul>
+
+            <h3><bdi>الاهتمامات العامة:</bdi></h3>
+            <ul>
+                <li><bdi>تفسير القرآن الكريم</bdi></li>
+                <li><bdi>الحديث وموضوعات التوحيد والعقيدة</bdi></li>
+                <li><bdi>الأديان والفرق</bdi></li>
+                <li><bdi>اللغات</bdi></li>
+                <li><bdi>فن الخط العربي</bdi></li>
+                <li><bdi>الألغاز</bdi></li>
+                <li><bdi>الفكاهة</bdi></li>
+            </ul>
+
+            <h2><bdi>وسائل الاتصال:</bdi></h2>
+            <p><strong><bdi>البريد الإلكتروني (الجامعة الإسلامية):</bdi></strong> a.m.alharbi AT iu DOT edu DOT sa</p>
+            <p><strong><bdi>البريد الإلكتروني (KAUST):</bdi></strong> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+        </div>
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2024 عبدالرحمن الحربي. All rights reserved.</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 عبدالرحمن الحربي | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Toggle Sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var content = document.getElementById('content');
+            sidebar.classList.toggle('show');
+            content.classList.toggle('shifted');
+        }
+    </script>
 
 </body>
+
 </html>
