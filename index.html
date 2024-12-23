@@ -18,11 +18,10 @@
             color: #333;
             line-height: 1.6;
             padding-top: 50px;
-            text-align: center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
         header {
@@ -75,33 +74,12 @@
         .section ul {
             list-style-type: disc;
             margin-bottom: 20px;
-            text-align: right;
             padding-left: 20px;
         }
 
         .section ul li {
             margin: 8px 0;
             font-size: 16px;
-        }
-
-        .section table {
-            width: 100%;
-            margin-top: 30px;
-            border-collapse: collapse;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-
-        .section table th, .section table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            font-size: 16px;
-        }
-
-        .section table th {
-            background-color: #00796b;
-            color: white;
         }
 
         footer {
@@ -114,6 +92,16 @@
 
         footer p {
             margin: 0;
+        }
+
+        /* RTL for Arabic */
+        .rtl {
+            text-align: right;
+        }
+
+        /* LTR for English */
+        .ltr {
+            text-align: left;
         }
 
         /* Responsive Design */
@@ -143,11 +131,6 @@
             ul li {
                 font-size: 14px;
             }
-
-            table th, table td {
-                font-size: 14px;
-                padding: 10px;
-            }
         }
 
     </style>
@@ -160,51 +143,8 @@
 </header>
 
 <div class="content">
-    <!-- Arabic Version -->
-    <div class="section" dir="rtl">
-        <h2>حياكم الله. هذي صفحتي على الـ"غِتهَب".</h2>
-        <p><strong>الاسم:</strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
-        <h3>الانتساب:</h3>
-        <ul>
-            <li><strong>الجامعة الإسلامية بالمدينة المنورة</strong> (معيد)</li>
-            <li><strong>جامعة الملك عبدالله للعلوم والتقنية</strong> (طالب دكتوراه)</li>
-        </ul>
-
-        <h3>التخصص:</h3>
-        <ul>
-            <li><strong>الرياضيات التطبيقية:</strong></li>
-            <ul>
-                <li>ألعاب المجال المتوسط</li>
-                <li>حركة الحشود والمرور (مثال: نموذج هيوز وَ نموذج LWR)</li>
-                <li>معادلات تفاضلية جزئية</li>
-                <li>التحليل الدالي والتحليل الحقيقي</li>
-            </ul>
-        </ul>
-
-        <h3>اهتمامات عامة:</h3>
-        <ul>
-            <li>تفسير القرآن العظيم</li>
-            <li>السنة ومسائل التوحيد والعقيدة</li>
-            <li>الملل والنحل</li>
-            <li>اللغات</li>
-            <li>الخط العربي</li>
-            <li>الألغاز</li>
-            <li>الطرفة والفكاهة</li>
-        </ul>
-
-        <h2>عناوين التواصل</h2>
-        <table>
-            <tr>
-                <th>العربية</th>
-            </tr>
-            <tr>
-                <td>abdulRahman.alharbi AT kaust DOT edu DOT sa</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- English Version -->
-    <div class="section" dir="ltr">
+    <!-- English Version (Left Side) -->
+    <div class="section ltr">
         <h2>Welcome! This is My Page on GitHub.</h2>
         <p><strong>Name:</strong> AbdurRahman Al-Harbi (@AM07Alharbi)</p>
         <h3>Affiliation:</h3>
@@ -236,14 +176,45 @@
         </ul>
 
         <h2>Contact Addresses</h2>
-        <table>
-            <tr>
-                <th>English</th>
-            </tr>
-            <tr>
-                <td>a.m.alharbi AT iu DOT edu DOT sa</td>
-            </tr>
-        </table>
+        <p><strong>Email (IU):</strong> a.m.alharbi AT iu DOT edu DOT sa</p>
+        <p><strong>Email (KAUST):</strong> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+    </div>
+
+    <!-- Arabic Version (Right Side) -->
+    <div class="section rtl">
+        <h2>حياكم الله. هذي صفحتي على الـ"غِتهَب".</h2>
+        <p><strong>الاسم:</strong> عبدالرحمن الحربي (@AM07Alharbi)</p>
+        <h3>الانتساب:</h3>
+        <ul>
+            <li><strong>الجامعة الإسلامية بالمدينة المنورة</strong> (معيد)</li>
+            <li><strong>جامعة الملك عبدالله للعلوم والتقنية</strong> (طالب دكتوراه)</li>
+        </ul>
+
+        <h3>التخصص:</h3>
+        <ul>
+            <li><strong>الرياضيات التطبيقية:</strong></li>
+            <ul>
+                <li>ألعاب المجال المتوسط</li>
+                <li>حركة الحشود والمرور (مثال: نموذج هيوز وَ نموذج LWR)</li>
+                <li>معادلات تفاضلية جزئية</li>
+                <li>التحليل الدالي والتحليل الحقيقي</li>
+            </ul>
+        </ul>
+
+        <h3>اهتمامات عامة:</h3>
+        <ul>
+            <li>تفسير القرآن العظيم</li>
+            <li>السنة ومسائل التوحيد والعقيدة</li>
+            <li>الملل والنحل</li>
+            <li>اللغات</li>
+            <li>الخط العربي</li>
+            <li>الألغاز</li>
+            <li>الطرفة والفكاهة</li>
+        </ul>
+
+        <h2>عناوين التواصل</h2>
+        <p><strong>البريد الإلكتروني (الجامعة الإسلامية):</strong> a.m.alharbi AT iu DOT edu DOT sa</p>
+        <p><strong>البريد الإلكتروني (كاوست):</strong> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
     </div>
 </div>
 
