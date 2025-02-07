@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Publications | صفحة عبدالرحمن</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="sidebar" id="sidebar">
+        <br><br>
+        <a href="index.html">الرئيسية | Home</a>
+        <a href="publications.html">أبحاث منشورة | Publications</a>
+        <a href="cv.html">السيرة الذاتية | CV</a>
+        <a href="miscellaneous.html">ملفات ومراجع | Miscellaneous</a>
+        <a href="links.html">روابط مفيدة | Useful Links</a>
+        <a href="iu.html">الجامعة الإسلامية | The Islamic University</a>
+        <a href="kaust.html">جامعة الملك عبدالله | KAUST</a>
+    </div>
+
+    <header>
+        <h1><bdi>صفحة عبدالرحمن م. الحربي</bdi><br>AbdulRahman M. Alharbi's Webpage</h1>
+    </header>
+
+    <div class="content" id="content">
+        <div class="section ltr">
+            <h2>Publications</h2>
+            <p>Here is a list of my published research papers and preprints:</p>
+            <ul>
+                <li><strong>Title of Paper 1:</strong> Journal/Conference Name, Year</li>
+                <li><strong>Title of Paper 2:</strong> Journal/Conference Name, Year</li>
+                <li><strong>Preprint:</strong> Link to arXiv or other repository</li>
+            </ul>
+        </div>
+
+        <div class="section rtl">
+            <h2><bdi>الأبحاث المنشورة</bdi></h2>
+            <p><bdi>هنا قائمة بالأبحاث التي نشرتها أو ما زالت في الطباعة:</bdi></p>
+            <ul>
+                <li><strong><bdi>عنوان البحث الأول:</bdi></strong> اسم المجلة أو المؤتمر، السنة</li>
+                <li><strong><bdi>عنوان البحث الثاني:</bdi></strong> اسم المجلة أو المؤتمر، السنة</li>
+                <li><strong><bdi>بحث قيد النشر:</bdi></strong> رابط إلى arXiv أو مستودع آخر</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 عبدالرحمن الحربي | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var content = document.getElementById('content');
+            sidebar.classList.toggle('show');
+            content.classList.toggle('shifted');
+        }
+    </script>
+</body>
+
+</html>
