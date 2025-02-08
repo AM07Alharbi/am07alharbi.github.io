@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>مواد تدريس Teaching | عبدالرحمن</title>
+    <title>السيرة الذاتية CV | عبدالرحمن</title>
     <style>
         /* Basic Styling */
         * {
@@ -178,6 +178,13 @@
             margin: 8px 0;
             font-size: 16px;
         }
+	#embededEnglish embed {
+        display: block;
+        margin: 0 auto;
+        }
+        #embededArabic embed {
+        display: block;
+        margin: 0 auto;
 
         footer {
             margin-top: 40px;
@@ -221,15 +228,15 @@
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar"> <a href="en/TemplateTeach.html"> <span lang="en"> &nbsp; &nbsp; &nbsp; &nbsp; English version </span> </a>
-        <a href="index.html"> <span lang="ar">الرئيسية</span></a>
-        <a href="publications.html"> <span lang="ar">أبحاث منشورة</span></a>
-        <a href="cv.html"><span lang="ar">(CV) السيرة الذاتية</span> </a>
-        <a href="teaching.html"><span lang="ar">مواد تدريس</span> </a>
-        <a href="miscellaneous.html"><span lang="ar">ملفات ومراجع متنوعة</span> </a>
-        <a href="links.html"> <span lang="ar">روابط مفيدة</span> </a>
-        <a href="https://iu.edu.sa"> <span lang="ar">الجامعة الإسلامية</span></a>
-        <a href="https://kaust.edu.sa/ar"><span lang="ar"> جامعة الملك عبدالله للعلوم والتقنية (كاوست)</span> </a>
+    <div class="sidebar" id="sidebar"> <br> <br>
+	<a href="index.html"> <span lang="ar">الرئيسية</span><br> <span lang="en">Home </span></a>
+        <a href="publications.html"> <span lang="ar">أبحاث منشورة</span><br> <span lang="en">Publications </span></a>
+        <a href="cv.html"><span lang="ar">السيرة الذاتية</span><br> <span lang="en">CV</span> </a>
+        <a href="teaching.html"><span lang="ar">مواد تدريس</span> <br> <span lang="en">Teaching</span> </a>
+        <a href="miscellaneous.html"><span lang="ar">ملفات ومراجع متنوعة</span> <br> <span lang="en">Miscellaneous</span> </a>
+        <a href="links.html"> <span lang="ar">روابط مفيدة</span> <br> <span lang="en">Useful Links</span> </a>
+        <a href="https://iu.edu.sa"> <span lang="ar">الجامعة الإسلامية</span> <br> <span lang="en">The Islamic University</span></a>
+        <a href="https://kaust.edu.sa"><span lang="ar">جامعة الملك عبدالله للعلوم والتقنية</span> <br> <span lang="en">KAUST</span> </a>
     </div>
     
     <!-- Header -->
@@ -241,32 +248,48 @@
     </header>
 
     <!-- Main Content -->
-   <div class="content">
-    <ul>
-      <li>
-        المادة الأولى
-      </li>
-      <li>
-        first course
-      </li>
-    </ul>
-  </div>
+    <div class="content" id="content">
+        <!-- English Section -->
+        <div class="section ltr">
+            <h2> Curriculum Vitae
+            <br><sub><sup><sup><a href="https://am07alharbi.github.io/files/cvEnglish.pdf"> <span lang="en">Curriculum Vitae (in English) </span></a> <br>
+</sup></sup></sub></h2>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 عبدالرحمن الحربي | All Rights Reserved</p>
-  </footer>
+        <!-- Arabic Section -->
+        <div class="section rtl">
+            <h2><bdi>السيرة الذاتية
+		    <br><sub><sup><sup> <a href="https://am07alharbi.github.io/files/cvArabic.pdf"> <span lang="ar"> السيرة الذاتية (بالعربية)</span></a> </sup></sup>  </sub></bdi></h2>
+        </div>
+    </div>
+	<div class="content" id="embededArabic"> 
+		 <embed src="https://am07alharbi.github.io/files/cvArabic.pdf" width="1000" height="1000" type="application/pdf" />
+        </div>
+	 <div class="content" id="embededEnglish"> 
+		 <embed src="https://am07alharbi.github.io/files/cvEnglish.pdf" width="1000" height="1000" type="application/pdf" />
+        </div>
+                   
 
-  <script>
-    // Toggle Sidebar: Toggle "shifted" class on all elements with the class "content"
-    function toggleSidebar() {
-      var sidebar = document.getElementById('sidebar');
-      var contentElements = document.querySelectorAll('.content');
-      sidebar.classList.toggle('show');
-      contentElements.forEach(function(content) {
-        content.classList.toggle('shifted');
-      });
-    }
-  </script>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 عبدالرحمن الحربي | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Toggle Sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var content = document.getElementById('content');
+            var linksTo = document.getElementById('linksTo');
+            var embededEnglish = document.getElementById('embededEnglish');
+            var embededArabic = document.getElementById('embededArabic');		
+            sidebar.classList.toggle('show');
+            content.classList.toggle('shifted');
+            linksTo.classList.toggle('shifted');
+            embededEnglish.classList.toggle('shifted');
+            embededArabic.classList.toggle('shifted');
+        }
+    </script>
 </body>
+
 </html>

@@ -70,7 +70,7 @@
             margin: 10px 0;
             display: block;
             padding: 8px 12px;
-            border-radius: 3px;
+            border-radius: 5px;
         }
 
         .sidebar a:hover {
@@ -81,36 +81,18 @@
         .toggle-btn {
             position: fixed;
             left: 10px;
-            top:10px;
-            padding: 5px 9px; /* Increased size of the toggle button */
+            top: 5px;
+            padding: 9px 13px; /* Increased size of the toggle button */
             background-color: #00796b;
             color: white;
             border: none;
             cursor: pointer;
             z-index: 1000; /* Ensures the button is always on top */
             font-size: 20px; /* Larger font size for the toggle button */
-            border-radius: 15%; /* Makes the button circular */
+            border-radius: 20%; /* Makes the button circular */
         }
 
         .toggle-btn:hover {
-            background-color: #004d40;
-        }
-         /* Language Button */
-        .lng-btn {
-            position: fixed;
-            left: 40px;
-            top:10px;
-            padding: 9px 13px; /* Increased size of the Language button */
-            background-color: #00796b;
-            color: white;
-            border: none;
-            cursor: pointer;
-            z-index: 1000; /* Ensures the button is always on top */
-            font-size: 20px; /* Larger font size for the Language button */
-            border-radius: 15%; /* Makes the button circular */
-        }
-
-        .lng-btn:hover {
             background-color: #004d40;
         }
 		/* Greetings Container */
@@ -203,7 +185,6 @@
 
         footer p {
             margin: 0;
-            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -239,27 +220,26 @@
 <body>
 
     <!-- Toggle Button -->
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button> </a>
-    <!-- <button class="lng-btn"> <a href="en/index.html"> En </a></button> -->
-
-
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar"> <a href="en/index.html"> <span lang="en"> &nbsp; &nbsp; &nbsp; &nbsp; English version </span> </a>
-        <a href="index.html"> <span lang="ar">الرئيسية</span></a>
-        <a href="publications.html"> <span lang="ar">أبحاث منشورة</span></a>
-        <a href="cv.html"><span lang="ar">(CV) السيرة الذاتية</span> </a>
-        <a href="teaching.html"><span lang="ar">مواد تدريس</span> </a>
-        <a href="miscellaneous.html"><span lang="ar">ملفات ومراجع متنوعة</span> </a>
-        <a href="links.html"> <span lang="ar">روابط مفيدة</span> </a>
-        <a href="https://iu.edu.sa"> <span lang="ar">الجامعة الإسلامية</span></a>
-        <a href="https://kaust.edu.sa/ar"><span lang="ar"> جامعة الملك عبدالله للعلوم والتقنية (كاوست)</span> </a>
+    <div class="sidebar" id="sidebar"> <a href="../index.html"> <span lang="ar"> &nbsp; &nbsp; &nbsp; &nbsp; النسخة العربية </span> </a>
+        
+	<a href="index.html"> <span lang="ar">الرئيسية</span><br> <span lang="en">Home </span></a>
+        <a href="publications.html"> <span lang="ar">أبحاث منشورة</span><br> <span lang="en">Publications </span></a>
+        <a href="cv.html"><span lang="ar">السيرة الذاتية</span><br> <span lang="en">CV</span> </a>
+        <a href="teaching.html"><span lang="ar">مواد تدريس</span> <br> <span lang="en">Teaching</span> </a>
+        <a href="miscellaneous.html"><span lang="ar">ملفات ومراجع متنوعة</span> <br> <span lang="en">Miscellaneous</span> </a>
+        <a href="links.html"> <span lang="ar">روابط مفيدة</span> <br> <span lang="en">Useful Links</span> </a>
+        <a href="https://iu.edu.sa"> <span lang="ar">الجامعة الإسلامية</span> <br> <span lang="en">The Islamic University</span></a>
+        <a href="https://kaust.edu.sa"><span lang="ar">جامعة الملك عبدالله للعلوم والتقنية</span> <br> <span lang="en">KAUST</span> </a>
     </div>
 
     <!-- Header -->
      <header>
         <h2>
-            <bdi>عبدالرحمن الحربي &nbsp&nbsp AbdulRahman Alharbi</bdi><br>
-
+            <bdi> عبدالرحمن الحربي</bdi><br>
+            AbdulRahman Alharbi
         </h2>
 
         <!-- Greetings Container -->
@@ -279,34 +259,70 @@
     </header>
 
     <!-- Main Content -->
-    <div class="section rtl">
-        <h3><bdi>أهلًا بكم في صفحتي الشخصية (على الغِتهَب)</bdi></h3>
-        <p><strong> <bdi> عبدالرحمن بن محمد الحربي </bdi> </strong></p>
-        <ul>
-            <li><strong><bdi>معيـد بالجامعة الإسلامية بالمدينة المنورة</bdi></strong></li>
-            <li><strong><bdi>دكتوراه من جامعة الملك عبدالله للعلوم والتقنية</bdi></strong> </li>
-        </ul>
-        <p><strong><bdi>التخصص: </bdi></strong>الرياضيات التطبيقية والعلوم الحسابية</p>
-        <p><strong><bdi>الاهتمامات البحثية:</bdi></strong></p>
-        <li><bdi>ألعاب المجال المتوسط / ألعاب الكثافة العالية</bdi></li>
-                <li><bdi>نماذج حركة الحشود وحركة المرور</bdi></li>
-                <li><bdi>المعادلات التفاضلية الجزئية</bdi></li>
-                <li><bdi>التحليل الدالي والتحليل الحقيقي</bdi></li>
-        <p><strong><bdi>اهتمامات عامة:</bdi></strong></p>
-            <li><bdi>تفسير القرآن الكريم</bdi></li>
-            <li><bdi>علوم الحديث والتوحيد والعقيدة</bdi></li>
-            <li><bdi>اللغات وفنون الخط العربي</bdi></li>
-            <li><bdi>الألغاز والفكاهة</bdi></li>
+    <div class="content" id="content">
+        <!-- English Version (Left Side) -->
+        <div class="section ltr">
+            <h3>Welcome to my personal webpage (on GitHub)</h3>
+            <p><strong></strong> AbdulRahman (ʿAbdur-Raḥmān) Mohammad Alharbi</p>
+            <ul>
+                <li><strong><u>Teaching Assistant</u> at The Islamic University of Madinah</strong></li>
+                <li><strong><u>PhD Student</u> at King Abdullah University of Science and Technology</strong></li>
+            </ul>
 
-        <p><strong><bdi>بيانات التواصل:</bdi></strong></p>
-        <p><strong><bdi>بريد الجامعة الإسلامية الإلكتروني:</bdi></strong> a.m.alharbi AT iu DOT edu DOT sa</p>
-        <p><strong><bdi>البريد الشخصي:</bdi></strong> abdulRahman.m.alharbi AT gmail DOT com</p>
+            <p><strong>Specialization:</strong> Applied Mathematics</p>
+            <strong>Research interests:</strong>
+                <ul>
+                    <li>Mean-Field Games and Their Applications</li>
+                    <li>Crowd Dynamics and Traffic Flow (e.g., Hughes Model, LWR Model)</li>
+                    <li>Partial Differential Equations</li>
+                    <li>Functional Analysis and Real Analysis</li>
+                </ul>
+
+            <strong>General interests:</strong>
+            <ul>
+                <li>Interpretation of the Noble Quran</li>
+                <li>Hadith and Matters of Tawheed and Aqeedah</li>
+                <li>Religions and Sects</li>
+                <li>Languages</li>
+                <li>Arabic Calligraphy</li>
+                <li>Puzzles</li>
+                <li>Humor</li>
+            </ul>
+
+            <strong>Contact info:</strong><br>
+            <strong>IU email:</strong> a.m.alharbi AT iu DOT edu DOT sa<br>
+            <strong>KAUST email:</strong> abdulRahman.alharbi AT kaust DOT edu DOT sa
+        </div>
+
+        <!-- Arabic Version (Right Side) -->
+        <div class="section rtl">
+            <h3><bdi>أهلًا بكم في صفحتي الشخصية (على الغِتهَب)</bdi></h3>
+            <p><strong> <bdi> عبدالرحمن بن محمد الحربي </bdi> </strong></p>
+            <ul>
+                <li><strong><bdi><u>معيـد</u> بالجامعة الإسلامية بالمدينة المنورة</bdi></strong></li>
+                <li><strong><bdi><u>طالب دكتوراه</u> بجامعة الملك عبدالله للعلوم والتقنية</bdi></strong> </li>
+            </ul>
+            <p><strong><bdi>التخصص:</bdi></strong>الرياضيات التطبيقية</p>
+            <p><strong><bdi>الاهتمامات البحثية:</bdi></strong></p>
+            <li><bdi>ألعاب المجال المتوسط / ألعاب الكثافة العالية</bdi></li>
+                    <li><bdi>نماذج سريان الحشود وحركة المرور</bdi></li>
+                    <li><bdi>المعادلات التفاضلية الجزئية</bdi></li>
+                    <li><bdi>التحليل الدالي والتحليل الحقيقي</bdi></li>
+            <p><strong><bdi>اهتمامات عامة:</bdi></strong></p>
+                <li><bdi>تفسير القرآن الكريم</bdi></li>
+                <li><bdi>علوم الحديث والتوحيد والعقيدة</bdi></li>
+                <li><bdi>اللغات وفنون الخط العربي</bdi></li>
+                <li><bdi>الألغاز والفكاهة</bdi></li>
+
+            <p><strong><bdi>بيانات التواصل:</bdi></strong></p>
+            <p><strong><bdi>بريد الجامعة الإسلامية الإلكتروني:</bdi></strong> a.m.alharbi AT iu DOT edu DOT sa</p>
+            <p><strong><bdi>بريد كاوست الإلكتروني:</bdi></strong> abdulRahman.alharbi AT kaust DOT edu DOT sa</p>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>آخر تحديث: الثلاثاء، 24 صفر 1447هـ <br>
-        Last update: Tuesdau, 16 September 2025</p>
+        <p>© 2024 عبدالرحمن الحربي | All Rights Reserved</p>
     </footer>
 
     <script>
