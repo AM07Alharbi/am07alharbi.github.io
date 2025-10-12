@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page with Embedded PDF</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack header and content */
+            margin: 0;
+        }
+        header {
+            background-color: #f0f0f0; /* Just for visibility */
+            padding: 10px;
+            text-align: center;
+        }
+        header a {
+            text-decoration: none;
+            color: black; /* Basic link color */
+        }
+        .content {
+            flex: 1; /* Take remaining height */
+            padding: 20px;
+            text-align: center; /* Center-align content */
+        }
+        .embed-container {
+            width: 90%; /* Adjust width as needed */
+            margin: 20px auto; /* Center the embed container */
+        }
+        footer {
+            background-color: #f0f0f0; /* Light gray background for visibility */
+            text-align: center; /* Center align text */
+            padding: 15px 0; /* Top and bottom padding */
+            width: 100%; /* Full width */
+        }
+        footer p {
+            margin: 5px 0; /* Small margin for the paragraph */
+            font-size: 14px; /* Font size for readability */
+            color: black; /* Text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3><bdi>بسم الله الرحمن الرحيم</bdi></h3>
+        <h2><bdi>التفاضل التكامل ١ &nbsp; &nbsp; Calculus 1</bdi></h2>
+        <br>
+        <a href="../../teaching.html">مواد التدريس </a> &nbsp; 
+        <a href="../../en/teaching.html"> Teaching </a>
+        &nbsp; &nbsp; &nbsp;
+        <a href="Syll.html"> <bdi>توصيف المقرر &nbsp; Syllabus</bdi> </a> &nbsp; 
+        &nbsp; &nbsp; &nbsp;
+        <a href="LN.html"> <bdi>تفريغ المحاضرات &nbsp; Lecture Notes</bdi> </a> &nbsp; 
+        &nbsp; &nbsp; &nbsp;
+        <a href="hw.html"> <bdi>الوجابات &nbsp; Homework</bdi> </a> &nbsp; 
+        &nbsp; &nbsp; &nbsp;
+        <a href="ws.html"> <bdi>ورش عمل &nbsp; Workshops</bdi> </a> &nbsp; 
+        &nbsp; &nbsp; &nbsp;
+        <a href="mis.html"> <bdi>أخرى &nbsp; Others</bdi> </a> &nbsp; 
+        &nbsp; &nbsp; &nbsp;
+    </header>
+
+    <div class="content">
+        <bdi> <a href="files/471_Calc1_Syll.pdf">  رابط توصيف المقرر </a> &nbsp; <a href="files/471_Calc1_Syll.pdf"> Syllabus link</a> </bdi>
+    </div>
+    <div class="embed-container">
+            <embed src="files/471_Calc1_Syll.pdf" width="100%" height="800px" type="application/pdf" />
+        </div>
+    <footer>
+        <p>آخر تعديل: ٢٠ ربيع الثاني ١٤٤٧ هـ</p>
+        <p>Last edited: 12 October 2025</p>
+    </footer>
+</body>
+</html>
