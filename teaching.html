@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>مواد تدريس Teaching | عبدالرحمن</title>
     <style>
+        @counter-style ArabicHindi {
+         system: numeric;
+         symbols: "٠" "١" "٢" "٣" "٤" "٥" "٦" "٧" "٨" "٩"; /* Eastern Arabic digits */
+        }
         /* Basic Styling */
         * {
             margin: 0;
@@ -242,13 +246,13 @@
     </header>
 
     <!-- Main Content -->
-   <div class="content">
-    <ul>
+   <div class="content rtl">
+    <ul style="list-style-type: ArabicHindi; list-style-position: inside;">
       <li>
-       <bdi> <a href="courses/471_Calc1/471_Calc1.html">التفاضل والتكامل ١</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="courses/471_Calc1/471_Calc1.html">Calculus 1</a></bdi>
+       <bdi> <a href="courses/471_Calc1/471_Calc1.html">التفاضل والتكامل ١</a> : <a href="courses/471_Calc1/471_Calc1.html">Calculus 1</a></bdi>
       </li>
       <li>
-       <bdi> <a href="index.html">الجبر والهندسة</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="index.html">Algebra & Geometry</a></bdi>
+       <bdi> <a href="courses/471_AlgGeo/471_AlgGeo.html">الجبر والهندسة</a> :  <a href="courses/471_AlgGeo/471_AlgGeo.html">Algebra & Geometry</a></bdi>
       </li>
     </ul>
   </div>
